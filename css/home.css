@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    overflow: hidden;
+}
+
+.photos{
+    height: 800px;
+    width: 1300px;
+    margin: 150px auto;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.photos > p{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 40px;
+    font-family: "隶书";
+}
+
+.album{
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    margin-top: 360px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 1150px;
+    height: 421px;
+    animation: imgmove 1s linear;
+}
+
+.album li{
+    float: left;
+    position: absolute;
+    left: 0px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+}
+
+.album img{
+    transition: all 0.5s;
+}
+
+.album img:hover{
+    transform: scale(1.1);
+}
+
+
+.album div{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    float: left;
+    bottom: -100px;
+}
+
+/* .content{
+    height: 3000px;
+} */
+
+.main{
+    float: left;
+}
+
+.description{
+    width: 60vw;
+    border-radius: 20px;
+    margin: 10px 0px 50px 4vw;
+    padding: 10px 60px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tit{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "隶书";
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info{
+    text-indent: 2em;
+    margin: 20px auto;
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+
+.info:last-child{
+    margin-bottom: 50px;
+}
+
+.feeling{
+    width: 60vw;
+    border-radius: 20px;
+    margin: 10px 0px 10px 4vw;
+    padding: 10px 60px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+aside{
+    width: 30vw;
+
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px 4vw 10px 2vw;
+    float: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.images{
+    width: 100%;
+    margin: 30px auto;
+}
+
+.images .tit{
+    text-align: center;
+    font-size: 35px;
+    font-family: "楷体";
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(136, 136, 136);
+}
+
+.images .tips{
+    text-align: center;
+    font-size: 15px;
+    color: rgb(147, 147, 147);
+}
+
+.images .image1{
+    margin: 5px auto;
+    margin-bottom: 2px;
+    width: 400px;
+    height: 300px;
+    background-image: url("../images/home/行政区划图.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.images .image1:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+}
+
+.images .image2{
+    margin: 5px auto;
+    margin-bottom: 2px;
+    width: 400px;
+    height: 300px;
+    background-image: url("../images/home/城区地图.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.images .image2:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s;
+}
+
+.images .image3{
+    margin: 5px auto;
+    margin-bottom: 2px;
+    width: 400px;
+    height: 300px;
+    background-image: url("../images/home/地铁线路图.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.images .image3:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+}
+
+.images .image4{
+    margin: 5px auto;
+    margin-bottom: 2px;
+    width: 400px;
+    height: 300px;
+    background-image: url("../images/home/北京市地形图.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.images .image4:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+}
+
+.big{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    background-color: rgba(34, 34, 34, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.big > img{
+    height: 90vh;
+    position: fixed;
+}
+
+/* .big > p{
+    background-color: blue;
+    width: 100vw;
+} */
+
+footer{
+    width: 100vw;
+    height: 700px;
+    clear: both;
+    /* margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    display: flex;
+    align-items: flex-end;
+}
+
+footer img{
+    width: 100vw;
+    position: absolute;
+    margin-bottom: 0px;
+}
+
+@keyframes imgmove{
+    0%{
+        opacity: 0;
+        margin-top: 300px;
+    }100%{
+        opacity: 1;
+        margin-top: 170px;
+    }
+}
+

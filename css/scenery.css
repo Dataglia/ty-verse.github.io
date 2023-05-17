@@ -1,0 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar ul .underline{
+    left: 400px;
+    background-color: #ffa126;
+}
