@@ -25,7 +25,7 @@
                             <li><a href="cuisine.html">北京烤鸭</a></li>
                             <li><a href="cuisine.html">炸酱面</a></li>
                             <li><a href="cuisine.html">铜锅涮肉</a></li>
-                            <li><a href="cuisine.html">豆汁焦圈</a></li>
+                            <li><a href="cuisine.html">豆汁</a></li>
                             <li><a href="cuisine.html">卤煮</a></li>
                         </ol>
                     </li>
@@ -33,7 +33,7 @@
                         <a href="scenery.html">名胜古迹</a>
                         <ol>
                             <li><a href="scenery.html">故宫</a></li>
-                            <li><a href="scenery.html">长城</a></li>
+                            <li><a href="scenery.html">八达岭长城</a></li>
                             <li><a href="scenery.html">天坛</a></li>
                             <li><a href="scenery.html">圆明园</a></li>
                             <li><a href="scenery.html">颐和园</a></li>
@@ -49,7 +49,7 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="index.html">退出登录</a>
+                        <a href="/index.html">退出登录</a>
                     </li>
                     <li class="underline"></li>
                 </ul>
@@ -60,10 +60,24 @@
                     <button class="searchbtn"></button>
                 </div>
             </div>
+            <div class="tools">
+                <div class="circle" onclick="gotop()">
+                    <p>回到<br>顶部</p>
+                </div>
+                <div class="circle">
+                    <p>联系<br>我们</p>
+                </div>
+                <div class="circle">
+                    <p>关于<br>京彩</p>
+                </div>
+                <div class="circle">
+                    <p>帮助<br>中心</p>
+                </div>
+            </div>
         </nav>
 
         <div class="menu">
-            <div class="item active" style="background-image: url(../images/cuisine/烤鸭.jpg);">
+            <div class="item active" style="background-image: url(../images/cuisine/烤鸭.jpg);" onclick="show(1)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -71,11 +85,11 @@
                     </div>
                     <div class="text">
                         <div class="tit">北京烤鸭</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">中国十大名菜之一，历史十分悠久</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/cuisine/炸酱面.jpg);">
+            <div class="item" style="background-image: url(../images/cuisine/炸酱面.jpg);" onclick="show(2)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -83,11 +97,11 @@
                     </div>
                     <div class="text">
                         <div class="tit">炸酱面</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">北京市传统小吃，纵横古今，横跨中外</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/cuisine/涮肉.png);">
+            <div class="item" style="background-image: url(../images/cuisine/涮肉.png);" onclick="show(3)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -95,23 +109,23 @@
                     </div>
                     <div class="text">
                         <div class="tit">铜锅涮肉</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">立秋十分，北京人家家都吃，热闹又美味</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/cuisine/豆汁.jpg);">
+            <div class="item" style="background-image: url(../images/cuisine/豆汁.jpg);" onclick="show(4)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
                         <p>汁</p>
                     </div>
                     <div class="text">
-                        <div class="tit">豆汁焦圈</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="tit">豆汁</div>
+                        <div class="sub">老北京独具特色的传统小吃，养胃、解毒、清火</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/cuisine/卤煮.jpg);">
+            <div class="item" style="background-image: url(../images/cuisine/卤煮.jpg);" onclick="show(5)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -119,28 +133,393 @@
                     </div>
                     <div class="text">
                         <div class="tit">卤煮</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">在北京很受欢迎，热腾腾的一碗，配料充足，甚是美味</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <img class="line" src="../images/logo/分界线-1.png" alt="分界线">
+
         <div class="content">
-            <div class="info active">
-                <div class="tit">北京烤鸭</div>
-                <div class="description">
-                    <p>
-                        烤鸭是北京的一道特色名菜，属于北京菜，该菜品以色泽红艳，肉质细嫩，味道醇厚，肥而不腻的特色，被誉为“天下美味”而驰名中外，其色泽略黄，柔软淡香，夹卷其他荤素食物食用，为宴席常用菜点，更是家常风味美食。
-                    </p>
-                    <p>
-                        烤鸭历史悠久，起源于中国南北朝时期的建康，当时《食珍录》中已记有炙鸭。北宋时期，烤鸭也称为炙鸭、烧鸭，已是汴京酒楼、市肆中的名肴。朱元璋建都应天后，明宫御厨便取用南京肥厚多肉的湖鸭制作菜肴。为了增加鸭菜的风味，厨师采用炭火烘烤，成菜后的鸭子吃口酥香，肥而不腻，受到人们称赞。
-                    </p>
-                </div>
+            <div id="info1" class="info" style="display: block;">
+                <aside>
+                    <p>推荐店铺</p>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/全聚德.jpg" alt="全聚德">
+                        </div>
+                        <h1>全聚德</h1>
+                        <h2>烤鸭</h2>
+                        <p>中华老字号，创建于1864年农历六月初六，周恩来总理曾多次把全聚德“全鸭席”选为国宴。</p>
+                        <a href="https://baike.baidu.com/item/%E5%85%A8%E8%81%9A%E5%BE%B7?fromModule=lemma_search-box" target="_blank">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/大董.jpg" alt="大董">
+                        </div>
+                        <h1>大董</h1>
+                        <h2>烤鸭</h2>
+                        <p>北京大董烤鸭店成立于1985年4月28日。在餐饮行业中一贯注重顾客的消费体验。</p>
+                        <a href="https://baike.baidu.com/item/%E5%A4%A7%E8%91%A3%E9%A4%90%E9%A5%AE%E6%8A%95%E8%B5%84%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/10852266?fr=aladdin" target="_blank">了解更多</a>
+                    </div>
+                </aside>
+                <main style="background-image: url(../images/cuisine/鸭.png);">
+                    <div class="tit">北京烤鸭</div>
+                    <div class="description">
+                        <p>
+                            烤鸭是北京的一道特色名菜，属于北京菜，该菜品以色泽红艳，肉质细嫩，味道醇厚，肥而不腻的特色，被誉为“天下美味”而驰名中外，其色泽略黄，柔软淡香，夹卷其他荤素食物食用，为宴席常用菜点，更是家常风味美食。
+                        </p>
+                        <p>
+                            烤鸭历史悠久，起源于中国南北朝时期的建康，当时《食珍录》中已记有炙鸭。北宋时期，烤鸭也称为炙鸭、烧鸭，已是汴京酒楼、市肆中的名肴。朱元璋建都应天后，明宫御厨便取用南京肥厚多肉的湖鸭制作菜肴。为了增加鸭菜的风味，厨师采用炭火烘烤，成菜后的鸭子吃口酥香，肥而不腻，受到人们称赞。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>历史缘由</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            明初年间，老百姓爱吃南京板鸭，皇帝也爱吃，据说明太祖朱元璋就“日食烤鸭一只”。宫廷里的御厨们就想方设法研制鸭馔的新吃法来讨好万岁爷，于是也就研制出了叉烧烤鸭和焖炉烤鸭这两种。叉烧烤鸭以“全聚德”为代表，而焖炉烤鸭则以“便宜坊”最著名。金陵烤鸭是选用肥大的草鸭为原料，净重要求在2.5公斤左右。
+                        </p>
+                        <p>
+                            据说，随着明成祖（即朱棣）篡位迁都北京后，也顺便带走了不少南京里烤鸭的高手。在嘉靖年间，烤鸭就从宫廷传到了民间，老“便宜坊”烤鸭店就在菜市口米市胡同挂牌开业，这也是北京第一家烤鸭店。而当时的名称则叫“金陵片皮鸭”，就在老“便宜坊”的市幌上还特别标有一行小字：金陵烤鸭。
+                        </p>
+                        <p>
+                            在1864年，京城名气最大的“全聚德”烤鸭店也挂牌开业，烤鸭技术又发展到了“挂炉”时代。它是用果木明火烤制并具有特殊的清香味道，不仅使烤鸭香飘万里而且还使得“北京烤鸭”取代了“南京烤鸭”，而“金陵片皮鸭”只能在港澳、深圳、广州等南方几个大城市的菜单上才能见到。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>吃法三则</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            北京烤鸭第一种吃法：据说是由大宅门里的太太小姐们兴起的。她们既不吃葱，也不吃蒜，却喜欢将那又酥又脆的鸭皮蘸了细细的白糖来吃。此后，全聚德的跑堂一见到女客来了，便必然跟着烤鸭，上一小碟白糖。
+                        </p>
+                        <p>
+                            北京烤鸭第二种吃法：甜面酱加葱条，可配黄瓜条、萝卜条，用筷子挑一点甜面酱，抹在荷叶饼上，放几片烤鸭盖在上面，再放上几根葱条、黄瓜条或萝卜条，将荷叶饼卷起，真是美味无比。
+                        </p>
+                        <p>
+                            北京烤鸭第三种吃法：蒜泥加甜面酱，也可配萝卜条等，用荷叶饼卷食鸭肉也是早年受欢迎的一种佐料。蒜泥可以解油腻，将片好的烤鸭蘸着蒜泥、甜面酱吃，在鲜香中更增添了一丝辣意，风味更为独特。不少顾客特别偏爱这种佐料。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info2" class="info" style="display: none;">
+                <aside>
+                    <p>推荐店铺</p>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/海碗居.jpg" alt="海碗居">
+                        </div>
+                        <h1>海碗居</h1>
+                        <h2>炸酱面</h2>
+                        <p>海碗居老北京炸酱面是具有老北京特色的餐饮企业，具有京居建筑的风格，再现京味儿民俗民情。</p>
+                        <a href="https://baike.baidu.com/item/%E6%B5%B7%E7%A2%97%E5%B1%85/4744078?fr=aladdin" target="_blank">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/方砖厂69号.jpg" alt="方砖厂69号">
+                        </div>
+                        <h1>方砖厂69号</h1>
+                        <h2>炸酱面</h2>
+                        <p>方砖厂69号炸酱面是一家位于北京市东城区方砖厂胡同1号的餐厅，号称是“京城最有家的味道”。</p>
+                        <a href="https://baike.baidu.com/item/%E6%96%B9%E7%A0%96%E5%8E%8269%E5%8F%B7%E7%82%B8%E9%85%B1%E9%9D%A2?fromModule=lemma_search-box" target="_blank">了解更多</a>
+                    </div>
+                </aside>
+                <main style="background-image: url(../images/cuisine/面.png);">
+                    <div class="tit">炸酱面</div>
+                    <div class="description">
+                        <p>
+                            炸酱面，是中国传统特色面食，被誉为“中国十大面条”之一，为北京菜系，主要材料为面条，酱油，豆芽，黄瓜等，口味咸、酸辣，清新爽口，有劲道。
+                        </p>
+                        <p>
+                            炸酱面在中国北方十分流行，而陕西、天津、上海、广东、东北也有不同制法的炸酱面。韩国亦有炸酱面，是由山东华侨带入韩国，以春酱（黑豆酱）为调味料，加上洋葱、虾、肉类等。
+                        </p>
+                        <p>
+                            不过摆放相当精致，中间盘放面条，最中央是一撮紫色的炸酱，像一盘工艺品。炸酱面是北京富有特色的食物，由菜码、炸酱拌面条而成。
+                        </p>
+                        <p>
+                            将黄瓜、香椿、豆芽、青豆、黄豆切好或煮好，做成菜码备用。然后做炸酱，将肉丁及葱姜等放在油里炒，再加入黄豆制作的黄酱或甜面酱炸炒，即成炸酱。
+                        </p>
+                        <p>
+                            面条煮熟后，捞出，老北京人称作“锅挑儿”，浇上炸酱，拌以菜码，即成炸酱面。
+                        </p>
+                        <p>
+                            炸酱面在中国的流行程度，从国内各地关于炸酱面的顺口溜可见一斑。
+                        </p>
+                        <p>
+                            在北方，常见的是猪肉丁炸酱。是以半肥瘦猪肉丁加葱、姜、蒜等在油锅炸炒，加黄稀酱，盖上锅盖小火咕嘟10分钟。
+                        </p>
+                        <p>
+                            当肉丁被黄酱浸透了，肉皮红亮，香味四溢。而讲究的则是用里脊丁炸酱三鲜（虾仁、里脊、玉兰片）炸酱等，还有木樨（鸡蛋）炸酱、炸豆腐丁酱、烧茄子丁酱等素品，油而不腻。
+                        </p>
+                        <p>
+                            老北京人吃炸酱面，冷天讲究吃热的，谓之“锅儿挑”（完全不过水），热天吃过水面，但汤要篦尽。
+                        </p>
+                        <p>
+                            根据季节佐以各种时鲜小菜，谓之“全面码儿”。初春，用掐头去尾的豆芽菜（称掐菜）、只有两片子叶的小水萝卜缨，并浇上过年剩下的腊八醋。
+                        </p>
+                        <p>
+                            春深，在酱里放上鲜花椒蕊儿，称花椒酱，面码儿则是青蒜、香椿芽、掐菜、青豆嘴、小水萝卜缨和丝（条）。初夏则以新蒜、焯过的鲜豌豆、黄瓜丝、扁豆丝、韭菜段等为面码儿。另外，上海、广东、韩国亦有炸酱面。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>营养价值</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            炸酱面主要原料是面条（富强粉）、猪肉和蔬菜。面条易于消化吸收，有改善贫血、增强免疫力、平衡营养吸收等功效。而猪肉含有丰富的优质蛋白质和必需的脂肪酸，并提供血红素（有机铁）和促进铁吸收的半胱氨酸，能改善缺铁性贫血；具有补肾养血，滋阴润燥的功效；但由于猪肉中胆固醇含量偏高，故肥胖人群及血脂较高者不宜多食。
+                        </p>
+                        <p>
+                            多放些蔬菜作为“面码”是非常必要的，只有这样才能使炸酱面成为一种健康的饮食。否则盐分多，纤维少，维生素C和钾不足。酱本身含有较多蛋白质和B族维生素，适合与面粉搭配。
+                        </p>
+                        <p>
+                            当然，需要注意的是：因为猪肉不宜与乌梅、甘草、鲫鱼、虾、鸽肉、田螺、杏仁、驴肉、羊肝、香菜、甲鱼、菱角、荞麦、鹌鹑肉、牛肉同食。所以在做炸酱面的时候要避免使用上述原料。
+                        </p>
+                        <p>
+                            此外，食用以猪肉为原料的炸酱面后不宜喝大量的水。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info3" class="info" style="display: none;">
+                <aside>
+                    <p>推荐店铺</p>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/东来顺.jpg" alt="东来顺">
+                        </div>
+                        <h1>东来顺</h1>
+                        <h2>铜锅涮肉</h2>
+                        <p>中华老字号“东来顺”，始建于1903年，立足清真餐饮主业，以传承坚守百年老字号品牌为发展核心。</p>
+                        <a href="https://www.donglaishun.com/" target="_blank">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/南门涮肉.jpg" alt="南门涮肉">
+                        </div>
+                        <h1>南门涮肉</h1>
+                        <h2>铜锅涮肉</h2>
+                        <p>南门涮肉创立于1994年，位于南二环天坛公园南门，主营老北京传统清真特色涮肉。</p>
+                        <a href="https://baike.baidu.com/item/%E5%8D%97%E9%97%A8%E6%B6%AE%E8%82%89/1930581?fr=aladdin" target="_blank">了解更多</a>
+                    </div>
+                </aside>
+                <main style="background-image: url(../images/cuisine/肉.png);">
+                    <div class="tit">铜锅涮肉</div>
+                    <div class="description">
+                        <p>
+                            老北京铜火锅涮肉是一道以芝麻酱、芝麻酱、酱豆腐、韭菜花等材料制作而成的美食。
+                        </p>
+                        <p>
+                            要说什么最适合秋冬吃，那必须是一顿羊肉火锅了。尤其是在北京，过了立秋之后，要说有什么是北京人必须要吃的，铜锅涮羊肉绝对排在前三位。作家肖复兴说：“在我们老院里，那些街坊常说：立秋以后，就是家里再穷，哪怕是袜子露出了脚后跟了，也得吃一顿涮羊肉。”
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>食材</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            涮肉小料原料：麻酱5汤勺，韭菜花1汤勺，酱豆腐1块，白糖1茶匙，盐1/2茶匙，辣椒油1茶匙，香油1茶匙。
+                        </p>
+                        <p>
+                            涮肉锅底原料：葱段3-4段，姜片2-3片。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>制作方法</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            1、依据个人口味习惯来调味。
+                        </p>
+                        <p>
+                            2、芝麻酱约5勺。芝麻酱+酱豆腐+韭菜花。
+                        </p>
+                        <p>
+                            3、一点一点的加入清水，顺时针慢慢的卸开麻酱。
+                        </p>
+                        <p>
+                            4、卸开的麻酱舀起再滴落会和碗中的麻酱慢慢融合为宜。加入白糖拌匀。
+                        </p>
+                        <p>
+                            5、酱豆腐1块，用勺子碾碎。
+                        </p>
+                        <p>
+                            6、把酱豆腐加入麻酱中，顺时针搅拌均匀。
+                        </p>
+                        <p>
+                            7、麻酱：酱豆腐：韭菜花=5：1：1。调入韭菜花搅拌均匀。
+                        </p>
+                        <p>
+                            8、最后放入盐调味。淋上辣椒油，不吃辣的可以不放。
+                        </p>
+                        <p>
+                            9、也可以加入少许香油搅拌。
+                        </p>
+                        <p>
+                            10、锅底很简单，放上葱段和姜片即可。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info4" class="info" style="display: none;">
+                <aside>
+                    <p>推荐店铺</p>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/老磁器口豆汁店.jpg" alt="老磁器口豆汁店">
+                        </div>
+                        <h1>老磁器口豆汁店</h1>
+                        <h2>豆汁</h2>
+                        <p>焦圈炸得脆脆的，蘸着豆汁吃别有一番风味。2020年11月，入选首届北京网红打卡地上榜名单。</p>
+                        <a href="https://baike.baidu.com/item/%E8%80%81%E7%A3%81%E5%99%A8%E5%8F%A3%E8%B1%86%E6%B1%81%E5%BA%97/3996245?fr=aladdin" target="_blank">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/锦芳小吃.jpg" alt="锦芳小吃">
+                        </div>
+                        <h1>锦芳小吃</h1>
+                        <h2>豆汁</h2>
+                        <p>创建于1926年，现为北京市有名优质小吃店。客人大多是老北京，年轻人也不少。</p>
+                        <a href="https://baike.baidu.com/item/%E9%94%A6%E8%8A%B3%E5%B0%8F%E5%90%83%E5%BA%97/3353428" target="_blank">了解更多</a>
+                    </div>
+                </aside>
+                <main style="background-image: url(../images/cuisine/汁.png);">
+                    <div class="tit">豆汁</div>
+                    <div class="description">
+                        <p>
+                            豆汁儿是老北京独具特色的传统小吃，根据文字记载有300年的历史。豆汁是以绿豆为原料，将淀粉滤出制作粉条等食品后的剩余残渣进行发酵产生的，具有养胃、解毒、清火的功效。
+                        </p>
+                        <p>
+                            豆汁儿历史悠久，据说早在辽宋时期就已在北京地区盛行，而豆汁成为宫廷饮料是清朝乾隆年间的事情。
+                        </p>
+                        <p>
+                            豆汁儿本来是北京普通百姓的最爱。乾隆十八年（1754年），有人上殿奏本称：“近日新兴豆汁一物，已派伊立布检查，是否清洁可饮，如无不洁之物，着蕴布募豆汁匠二三名，派在御膳房当差。”于是，源于民间的豆汁成了宫廷的御膳，乾隆皇帝命人把豆汁儿引入宫廷，并召集群臣共同品尝这民间饮品，结果众大臣喝完齐声叫好。就这样，豆汁儿同样成为宫廷饮品。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>做法</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            1.将绿豆杂质筛净，淘洗干净，放入盆内用凉水（冬天用温水，水量要比绿豆高出2倍）泡十几小时。待豆皮用手一捻就掉时捞出，加水磨成稀糊（磨得越细越好），每千克绿豆约出稀糊2.65千克。然后，在稀糊内加入1.5千克的浆水（即前一次制作豆汁、淀粉时撇出的清水）并逐次加入不少于12千克的凉水过滤，约可滤出粉浆17千克、豆渣2千克。
+                        </p>
+                        <p>
+                            2.把粉浆倒入大缸内，经过一夜沉淀。白色的淀粉就沉淀到缸底，上面是一层灰褐色的黑粉，再上一层即是颜色灰绿、质地较浓的生豆汁，最上层是浮沫和浆水。撇去浮沫和浆水，把生豆汁舀出（可得生豆汁8千克左右，另有淀粉约500克和黑粉少量），在煮之前还需在沉淀一次，夏季沉淀六小时。冬季沉淀一夜。沉淀好后，撇去上面的浆水。
+                        </p>
+                        <p>
+                            3.锅内放入少许凉水，用旺火烧沸后倒入生豆汁，待豆汁逐涨并将溢出锅外时，立即改用微火保温（此时不能用旺火，否则会煮成麻豆腐），随吃随盛，并佐以辣咸菜同食。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>特色</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            一般人喝豆汁，不管它是热还是凉，自然喝不出所以然，而且现今一些卖豆汁的铺子把豆汁熬好以后就放那儿，凉了才再加热，有的索性就不管了，这怎么能喝到正宗的豆汁呢。凉着喝，入嘴便会有泔水味；如果趁热喝，味道就不一样，甜中带酸，酸中有涩，滋味独特；再就着咸菜丝、焦圈、烧饼之类就更有味道了。
+                        </p>
+                        <p>
+                            老北京人爱喝豆汁，或者直接买来生豆汁回家自己熬，一般冬天都这么喝；或者是到庙会和街头的豆汁摊儿上去喝，一般夏天这么喝。现如今，走街串巷豆汁小贩都没有了，庙会上还偶尔见到。豆汁难觅，正宗豆汁更难觅。这可苦了那些爱喝豆汁的北京人了，他们只能到那么有限的几个小吃店去满足这一口了。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info5" class="info" style="display: none;">
+                <aside>
+                    <p>推荐店铺</p>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/小肠陈.jpg" alt="小肠陈">
+                        </div>
+                        <h1>小肠陈</h1>
+                        <h2>卤煮</h2>
+                        <p>起源于清朝乾隆年间，距今已有百年历史，以经营老北京风味卤煮小肠而著名。</p>
+                        <a href="https://baike.baidu.com/item/%E5%B0%8F%E8%82%A0%E9%99%88/1794588" target="_blank">了解更多</a>
+                    </div>
+                    <div class="card">
+                        <div class="photo">
+                            <img src="../images/cuisine/北新桥卤煮老店.jpg" alt="北新桥卤煮老店">
+                        </div>
+                        <h1>北新桥卤煮老店</h1>
+                        <h2>卤煮</h2>
+                        <p>24小时营业，是老字号，有露天位，可以刷卡，可以自带酒水，有停车位，提供在线菜单。</p>
+                        <a href="https://baike.baidu.com/item/%E5%8C%97%E6%96%B0%E6%A1%A5%E5%8D%A4%E7%85%AE%E8%80%81%E5%BA%97%E6%80%BB%E5%BA%97/14286221?fr=aladdin" target="_blank">了解更多</a>
+                    </div>
+                </aside>
+                <main style="background-image: url(../images/cuisine/卤.png);">
+                    <div class="tit">卤煮</div>
+                    <div class="description">
+                        <p>
+                            卤煮是北京一道著名的地方传统小吃，它是将炖好的猪肠和猪肺放在一起煮，搭配火烧一起食用。卤煮起源于北京城南的南横街。据说光绪年间，因为用五花肉煮制的苏造肉价格昂贵，所以人们就用猪头肉和猪下水代替。经过民间烹饪高手的传播，久而久之，造就了卤煮火烧。地道的北京人估计没几个不知道卤煮火烧的。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>吃法讲究</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            卤煮火烧在北京人当中很受欢迎。火烧切井字刀，豆腐切三角，小肠、肺头剁小块，从锅里舀一勺老汤往碗里一浇，再来点蒜泥、辣椒油、豆腐乳、韭菜花。热腾腾的一碗端上来，火烧、豆腐、肺头吸足了汤汁，火烧透而不黏，肉烂而不糟，其中味道最厚重的还是小肠。肠酥软，味厚而不腻，没有任何异味。偶尔吃到一片白肉更是满口脂香。因为是老汤的缘故，口轻的人如果觉得汤口有点咸，可以向店家要些白开水兑入汤中。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>烹饪方法</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            主料：猪肠、猪肺。
+                        </p>
+                        <p>
+                            配料：盐、黄酒、醋、八角、肉桂皮、花椒、姜、香叶、老抽、面粉、冰糖。
+                        </p>
+                        <p>
+                            1、猪肠用盐、黄酒、醋反复抓洗，内壁、外壁都要洗干净，用温水冲洗效果好。
+                        </p>
+                        <p>
+                            2、锅中放清水，将猪肠放进去焯水（凉水下锅）。
+                        </p>
+                        <p>
+                            3、另起锅，加开水、八角、肉桂皮、花椒、姜、葱、香叶、黄酒、陈皮、生抽、老抽、干辣椒，大火烧开，小火卤肠。
+                        </p>
+                        <p>
+                            4、面粉加水揉成团，醒一会儿。
+                        </p>
+                        <p>
+                            5、将醒好的面揉光，分割成小面剂，揉圆。
+                        </p>
+                        <p>
+                            6、将圆面剂擀成圆片。
+                        </p>
+                        <p>
+                            7、平底锅抹少许油，将饼烙熟（我们第一锅抹油了，以后就没再抹）。
+                        </p>
+                        <p>
+                            8、卤好的猪肠切小段。
+                        </p>
+                        <p>
+                            9、锅中放少许油，煸炒郫县豆瓣，将卤汤回锅，烧开，加清水，加盐、酱油、醋、冰糖、黄酒、南乳汁等煮开。
+                        </p>
+                        <p>
+                            10、放入猪肺及豆腐泡炖。
+                        </p>
+                        <p>
+                            11、最后加入猪肠煮开即可。
+                        </p>
+                        <p>
+                            12、将烧饼切小块，汤料及汤汁浇在烧饼上，加辣椒油、蒜汁、小葱末、醋调味。新烙的饼直接浇汁就可以吃，不用把烧饼放入汤锅中煮，否则烧饼没嚼头了。但烧饼是隔夜的，就要煮煮再吃。
+                        </p>
+                    </div>
+                </main>
             </div>
         </div>
+        <footer>
+            <img src="../images/logo/剪影.png" alt="城市剪影">
+            <p>&copy;&nbsp;2023-2023&nbsp;京彩&nbsp;&copy;&nbsp;童湧文<br>2023年春季学期Web前端开发期末大作业</p>
+        </footer>
     </div>
-
-    
 
     <script src="../js/nav.js"></script>
     <script src="../js/menu.js"></script>

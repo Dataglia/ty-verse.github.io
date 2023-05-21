@@ -25,7 +25,7 @@
                             <li><a href="cuisine.html">北京烤鸭</a></li>
                             <li><a href="cuisine.html">炸酱面</a></li>
                             <li><a href="cuisine.html">铜锅涮肉</a></li>
-                            <li><a href="cuisine.html">豆汁焦圈</a></li>
+                            <li><a href="cuisine.html">豆汁</a></li>
                             <li><a href="cuisine.html">卤煮</a></li>
                         </ol>
                     </li>
@@ -33,7 +33,7 @@
                         <a href="scenery.html">名胜古迹</a>
                         <ol>
                             <li><a href="scenery.html">故宫</a></li>
-                            <li><a href="scenery.html">长城</a></li>
+                            <li><a href="scenery.html">八达岭长城</a></li>
                             <li><a href="scenery.html">天坛</a></li>
                             <li><a href="scenery.html">圆明园</a></li>
                             <li><a href="scenery.html">颐和园</a></li>
@@ -49,7 +49,7 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="index.html">退出登录</a>
+                        <a href="/index.html">退出登录</a>
                     </li>
                     <li class="underline"></li>
                 </ul>
@@ -60,10 +60,25 @@
                     <button class="searchbtn"></button>
                 </div>
             </div>
+            <div class="tools">
+                <div class="circle" onclick="gotop()">
+                    <p>回到<br>顶部</p>
+                </div>
+                <div class="circle">
+                    <p>联系<br>我们</p>
+                </div>
+                <div class="circle">
+                    <p>关于<br>京彩</p>
+                </div>
+                <div class="circle">
+                    <p>帮助<br>中心</p>
+                </div>
+            </div>
+            
         </nav>
 
         <div class="menu">
-            <div class="item active" style="background-image: url(../images/scenery/角楼.jpg);">
+            <div class="item active" style="background-image: url(../images/scenery/角楼.jpg);" onclick="show(1)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -71,23 +86,23 @@
                     </div>
                     <div class="text">
                         <div class="tit">故宫</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">位于北京中轴线的中心，明清两代的皇家宫殿</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/scenery/长城.jpg);">
+            <div class="item" style="background-image: url(../images/scenery/长城.jpg);" onclick="show(2)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
                         <p>城</p>
                     </div>
                     <div class="text">
-                        <div class="tit">长城</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="tit">八达岭长城</div>
+                        <div class="sub">中国古代伟大的防御工程万里长城的重要组成部分，举世闻名的旅游胜地</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/scenery/天坛.jpg);">
+            <div class="item" style="background-image: url(../images/scenery/天坛.jpg);" onclick="show(3)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -95,11 +110,11 @@
                     </div>
                     <div class="text">
                         <div class="tit">天坛</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">中国现存最大的古代祭祀性建筑群，明清两代皇帝于此祭天、祈谷</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/scenery/圆明园.jpg);">
+            <div class="item" style="background-image: url(../images/scenery/圆明园.jpg);" onclick="show(4)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -107,11 +122,11 @@
                     </div>
                     <div class="text">
                         <div class="tit">圆明园</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">中国清代大型皇家园林，堪称人类文化的宝库之一，当时世界上最大的一座博物馆</div>
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url(../images/scenery/颐和园.jpg);">
+            <div class="item" style="background-image: url(../images/scenery/颐和园.jpg);" onclick="show(5)">
                 <div class="shadow"></div>
                 <div class="content">
                     <div class="icon">
@@ -119,16 +134,420 @@
                     </div>
                     <div class="text">
                         <div class="tit">颐和园</div>
-                        <div class="sub">这是一段描述</div>
+                        <div class="sub">中国清朝时期皇家园林，汲取江南园林的设计手法，被誉为“皇家园林博物馆”</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <img class="line" src="../images/logo/分界线-1.png" alt="分界线">
 
+        <div class="content">
+            <div id="info1" class="info" style="display: block;">
+                <aside>
+                    <p class="tit">留影墙</p>
+                    <p class="tip">（点击查看大图）</p>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/故宫-1.jpg);" onclick="showimage(1)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/故宫-2.jpg);" onclick="showimage(2)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/故宫-3.jpg);" onclick="showimage(3)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/故宫-4.jpg);" onclick="showimage(4)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/故宫-5.jpg);" onclick="showimage(5)"></div>
+                    </div>
+                </aside>
+                <div id="bigimages1" class="big" style="display: none;" onclick="hideimage(1)">
+                    <img src="../images/scenery/故宫-1.jpg" alt="故宫">
+                </div>
+                <div id="bigimages2" class="big" style="display: none;" onclick="hideimage(2)">
+                    <img src="../images/scenery/故宫-2.jpg" alt="故宫">
+                </div>  
+                <div id="bigimages3" class="big" style="display: none;" onclick="hideimage(3)">
+                    <img src="../images/scenery/故宫-3.jpg" alt="故宫">
+                </div>  
+                <div id="bigimages4" class="big" style="display: none;" onclick="hideimage(4)">
+                    <img src="../images/scenery/故宫-4.jpg" alt="故宫">
+                </div>
+                <div id="bigimages5" class="big" style="display: none;" onclick="hideimage(5)">
+                    <img src="../images/scenery/故宫-5.jpg" alt="故宫">
+                </div>  
+                <main style="background-image: url(../images/scenery/宫.png);">
+                    <div class="tit">故宫</div>
+                    <div class="description">
+                        <p>
+                            北京故宫是中国明清两代的皇家宫殿，旧称紫禁城，位于北京中轴线的中心。北京故宫以三大殿为中心，占地面积约72万平方米，建筑面积约15万平方米，有大小宫殿七十多座，房屋九千余间。
+                        </p>
+                        <p>
+                            北京故宫于明成祖永乐四年（1406年）开始建设，以南京故宫为蓝本营建，到永乐十八年（1420年）建成，成为明清两朝二十四位皇帝的皇宫。民国十四年国庆节（1925年10月10日）故宫博物院正式成立开幕。北京故宫南北长961米，东西宽753米，四面围有高10米的城墙，城外有宽52米的护城河。故宫有四座城门，南面为午门，北面为神武门，东面为东华门，西面为西华门。城墙的四角，各有一座风姿绰约的角楼，民间有九梁十八柱七十二条脊之说，形容其结构的复杂。
+                        </p>
+                        <p>
+                            北京故宫内的建筑分为外朝和内廷两部分。外朝的中心为太和殿、中和殿、保和殿，统称三大殿，是国家举行大典礼的地方。三大殿左右两翼辅以文华殿、武英殿两组建筑。内廷的中心是乾清宫、交泰殿、坤宁宫，统称后三宫，是皇帝和皇后居住的正宫。其后为御花园。后三宫两侧排列着东、西六宫，是后妃们居住休息的地方。东六宫东侧是天穹宝殿等佛堂建筑，西六宫西侧是中正殿等佛堂建筑。外朝、内廷之外还有外东路、外西路两部分建筑。
+                        </p>
+                        <p>
+                            北京故宫是世界上现存规模最大、保存最为完整的木质结构古建筑群之一，是国家AAAAA级旅游景区，1961年被列为第一批全国重点文物保护单位；1987年被列为世界文化遗产。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>建筑规模</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            北京故宫由明朝皇帝朱棣始建，设计者为蒯祥（1397-1481年，字廷瑞，苏州人）。占地72万平方米（长961米，宽753米），建筑面积约15万平方米，占地面积72万平方米，用100万民工，共建了14年，有房屋9999间半，实际据1973年专家现场测量故宫有大小院落90多座，房屋有980座，共计8707间（注：此“间”并非现今房间之概念，而是指四根房柱所形成的空间）。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>建筑造型</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            故宫前部宫殿，当时建筑造型要求宏伟壮丽，庭院明朗开阔，象征封建政权至高无上，太和殿坐落在紫禁城对角线的中心，四角上各有十只吉祥瑞兽。故宫的设计者认为这样以显示皇帝的威严，震慑天下。后部内廷却要求深邃、紧凑，因此东西六宫都自成一体，各有宫门宫墙，相对排列，秩序井然。内廷之后是宫后苑。
+                        </p>
+                        <p>
+                            故宫宫殿是沿着一条南北向中轴线排列，三大殿、后三宫、御花园都位于这条中轴线上。并向两旁展开，南北取直，左右对称。这条中轴线不仅贯穿在紫禁城内，而且南达永定门，北到鼓楼、钟楼，贯穿了整个城市。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>总体馆藏</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            北京故宫藏有大量珍贵文物，据统计总共达1862690件之多，统称有文物100万件，占中国全国文物总数的1/6。
+                        </p>
+                        <p>
+                            截至2005年12月31日，中国文物系统文物收藏单位馆藏一级文物的总数已达109197件，现已全部在国家文物局建档备案。
+                        </p>
+                        <p>
+                            在全国保存一级文物的1330个收藏单位中，故宫博物院以8273件（套）高居榜首，并收有很多绝无仅有的国宝。故宫的一些宫殿中设立了综合性的历史艺术馆、绘画馆、分类的陶瓷馆、青铜器馆、明清工艺美术馆、铭刻馆、玩具馆、文房四宝馆、玩物馆、珍宝馆、钟表馆和清代宫廷典章文物展览等，收藏有大量古代艺术珍品，是中国收藏文物最丰富的博物馆。
+                        </p>
+                        <p>
+                            故宫博物院在1949年以后进一步丰富了馆藏，截至到2017年，文物总数达到1862690件，其中珍贵文物1684490件、一般文物115491件、标本7577件。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info2" class="info" style="display: none;">
+                <aside>
+                    <p class="tit">留影墙</p>
+                    <p class="tip">（点击查看大图）</p>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/长城-1.jpg);" onclick="showimage(6)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/长城-2.jpg);" onclick="showimage(7)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/长城-3.jpg);" onclick="showimage(8)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/长城-4.jpg);" onclick="showimage(9)"></div>
+                    </div>
+                </aside>
+                <div id="bigimages6" class="big" style="display: none;" onclick="hideimage(6)">
+                    <img src="../images/scenery/长城-1.jpg" alt="长城">
+                </div>
+                <div id="bigimages7" class="big" style="display: none;" onclick="hideimage(7)">
+                    <img src="../images/scenery/长城-2.jpg" alt="长城">
+                </div>  
+                <div id="bigimages8" class="big" style="display: none;" onclick="hideimage(8)">
+                    <img src="../images/scenery/长城-3.jpg" alt="长城">
+                </div>  
+                <div id="bigimages9" class="big" style="display: none;" onclick="hideimage(9)">
+                    <img src="../images/scenery/长城-4.jpg" alt="长城">
+                </div>
+                <main style="background-image: url(../images/scenery/城.png);">
+                    <div class="tit">八达岭长城</div>
+                    <div class="description">
+                        <p>
+                            八达岭长城，位于北京市延庆区军都山关沟古道北口。是中国古代伟大的防御工程万里长城的重要组成部分，是明长城的一个隘口。八达岭长城为居庸关的重要前哨，古称“居庸之险不在关而在八达岭”。
+                        </p>
+                        <p>
+                            明长城的八达岭段被称作“玉关天堑”，为明代居庸关八景之一。八达岭长城是明长城向游人开放最早的地段，八达岭景区以八达岭长城为主，兴建了八达岭饭店和由江泽民主席亲笔题名的中国长城博物馆等功能齐全的现代化旅游服务设施。
+                        </p>
+                        <p>
+                            八达岭景区是全国文明风景旅游区示范点，以其雄伟的景观、完善的设施和深厚的文化历史内涵而著称于世，是举世闻名的旅游胜地。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>建筑结构</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            八达岭长城其关城为东窄西宽的梯形，建于明弘治十八年（1505年），嘉靖、万历年间曾修葺。关城有东西二门东门额题“居庸外镇”，刻于嘉靖十八年（1539年）；西门额题“北门锁钥”，刻于万历十年（1582年）。两门均为砖石结构，券洞上为平台，台之南北各有通道，连接关城城墙，台上四周砌垛口。前后共建墩台1316座。
+                        </p>
+                        <p>
+                            八达岭长城典型地表现了万里长城雄伟险峻的风貌。作为北京的屏障，这里山峦重叠，形势险要。气势极其磅礴的城墙南北盘旋延伸于群峦峻岭之中，视野所及，不见尽头。依山势向两侧展开的长城雄峙危崖，陡壁悬崖上古人所书的"天险"二字，确切的概括了八达岭位置的军事重要性。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>主要景点</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            望京石：位于八达岭关城东门外，“居庸外镇”关门前大道南侧。为一块高1米、长15米的天然花岗石，上刻“望京石”三个字。
+                        </p>
+                        <p>
+                            天险留题：位于东关门内侧，今熊乐园右上方山崖上。在一块凿平的崖壁上，刻有“天险”二字，为清道光十五年（1835年）延庆州知州童恩所题，保阳刘振宗镌刻。
+                        </p>
+                        <p>
+                            弹琴峡：位于五贵（鬼）头山下，为关沟胜景之一。
+                        </p>
+                        <p>
+                            关隘：八达岭原为隘口，后建关城。明隆庆三年（1569年）至万历十年（1582年）在各口修建障塞，并在各口两侧的山上建起边城、梢墙、挡马墙等，后来逐渐增建为长城，并修筑敌楼、墩台。起自川草花顶，经石佛寺口、青龙桥东口、青龙桥西口、王瓜峪口、八达岭口、化木梁口、于家冲口、黑豆谷口至石峡峪，全长约12千米。八达岭长城、关城、城墙、要塞及关沟中部的居庸关构成明代北京完整的军事防御体系。
+                        </p>
+                        <p>
+                            岔道城：据《延庆州志》记载：“岔道有二路，一至怀来卫，榆林、土木、鸡鸣三驿至宣府（今宣化）为西路，一至延庆州、永宁卫、四海治为北路。”故得名“岔道”。根据考古报告，明嘉靖三十年（1551年）岔道城开始修筑，历经三十余年终于建成，整个城呈不规则长方形，中间略鼓，两端略缩依山势而建，北部城建在半山之上。整个城东西510米，南北宽185米，为船形。全城总占地面积约8.3万平方米，城墙高8.5米，由石条城砖、石灰、泥土筑成。城上设有马道，外侧宇墙设垛口、望孔、射口，南城墙有烽火台2座。城墙的建造分为两个时期，早期是内夯土，外用石块加白灰砌筑，晚期又在原城墙外用条石和砖砌筑。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info3" class="info" style="display: none;">
+                <aside>
+                    <p class="tit">留影墙</p>
+                    <p class="tip">（点击查看大图）</p>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/天坛-1.jpg);" onclick="showimage(10)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/天坛-2.jpg);" onclick="showimage(11)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/天坛-3.jpg);" onclick="showimage(12)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/天坛-4.jpg);" onclick="showimage(13)"></div>
+                    </div>
+                </aside>
+                <div id="bigimages10" class="big" style="display: none;" onclick="hideimage(10)">
+                    <img src="../images/scenery/天坛-1.jpg" alt="天坛">
+                </div>
+                <div id="bigimages11" class="big" style="display: none;" onclick="hideimage(11)">
+                    <img src="../images/scenery/天坛-2.jpg" alt="天坛">
+                </div>  
+                <div id="bigimages12" class="big" style="display: none;" onclick="hideimage(12)">
+                    <img src="../images/scenery/天坛-3.jpg" alt="天坛">
+                </div>  
+                <div id="bigimages13" class="big" style="display: none;" onclick="hideimage(13)">
+                    <img src="../images/scenery/天坛-4.jpg" alt="天坛">
+                </div>    
+                <main style="background-image: url(../images/scenery/坛.png);">
+                    <!-- <img src="../images/scenery/坛.png" alt="坛"> -->
+                    <div class="tit">天坛</div>
+                    <div class="description">
+                        <p>
+                            天坛公园（Temple of Heaven），原名“天地坛”，位于北京市东城区天坛内东里7号，始建于明永乐十八年（1420年），明嘉靖九年（1530年）改名为“天坛”，是明清两代皇帝“祭天”“祈谷”的场所，总面积273公顷，是中国现存最大的古代祭祀性建筑群。民国七年（1918年）1月1日，辟为天坛公园，对外开放。
+                        </p>
+                        <p>
+                            天坛公园由两道坛墙环绕，被分为“内坛”“外坛”两部分；域北呈圆形，南为方形，寓意“天圆地方”；主要由春季祈祷丰年的“祈谷坛”，冬至日祭天的“圜丘坛”，皇帝祭祀前居住的斋宫、演习祭祀礼乐的神乐署四大古建筑群组成；祈谷坛中的祈年殿是北京市的标志性建筑。天坛公园外坛种植有大量古柏林。
+                        </p>
+                        <p>
+                            2007年5月8日，天坛公园被国家旅游局评为国家AAAAA级旅游景区。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>主要建筑</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            祈年殿：祈年殿始建于明永乐十八年（1420年），初名“大祀殿”，为一矩形大殿，用于合祀天、地。明嘉靖二十四年（1545年），改为三重檐圆殿，殿顶覆盖上青、中黄、下绿三色琉璃，寓意天、地、万物，并更名为“大享殿”。清乾隆十六年（1751年），改三色瓦为统一的蓝瓦金顶，定名“祈年殿”，是孟春（正月）祈谷的专用建筑。祈年殿殿高38.2米，直径24.2米，内部开间还分别寓意四季、十二月、十二时辰以及周天星宿，是仅存的一例中国古代明堂式建筑。
+                        </p>
+                        <p>
+                            祈年门：祈年门是祈谷坛仪门，坐落于祈年殿南，建于明永乐十八年（1420年）。初称大祀门，后改为大享门。清乾隆十六年（1751年），经乾隆皇帝钦定为祈年门。祈年门为庑殿顶建筑。殿宇五楹，中三间为门，崇基石栏，是中国古代最高等级门制。祈年门中门供皇天上帝专用，皇帝进出左（东）门，百官进出右（西）门。
+                        </p>
+                        <p>
+                            皇乾殿：皇乾殿是平时供奉祈谷坛祭祀正位和配位神版的大殿，建于明永乐十八年（1420年），位于祈谷坛内壝外北侧，由三座琉璃门与祭坛相通，蓝琉璃瓦庑殿顶，崇基石栏，殿前设月台，月台前方和左右出陛各八级。院内西侧有古稀门。檐下悬挂“皇乾殿”匾额为明嘉靖帝亲书。
+                        </p>
+                        <p>
+                            圜丘：圜丘建于明嘉靖九年（1530年）。每年冬至在台上举行“祀天大典”，俗称祭天台。圜丘起初为一座蓝琉璃圆台，清乾隆十四年（1749年）扩建，同时变蓝琉璃为汉白玉石栏板，艾叶青石台面。圜丘的蹬坛石阶、各层台面石和石栏板的数量，均采用“九”和“九”的倍数，以应“九重天”。通过对“九”的反复运用，以强调“天”的地位。
+                        </p>
+                        <p>
+                            棂星门：棂星门设于圜丘墙外，是古代祭坛壝墙专用门式，形似牌坊，以汉白玉石雕造。天坛圜丘内外墙各设门四组，每组三门，共设棂星门八组24座，称“云门玉立”
+                        </p>
+                        <p>
+                            皇穹宇：皇穹宇建于明嘉靖九年（1530年）。初为重檐圆形建筑，名“泰神殿”，是圜丘坛天库的正殿。用于平日供奉祀天大典所供神版的殿宇。明嘉靖十七年（1538年）改名为“皇穹宇”。清乾隆十七年（1752年）改建为今式。皇穹宇殿高19.5米，直径15.6米，木拱结构，上覆蓝瓦金顶。殿内天花藻井为青绿基调的金龙藻井，中心为大金团龙图案
+                        </p>
+                        <p>
+                            三音石：三音石为皇穹宇殿前御路的第三块石板，因站在石上击掌一次却能听到三个回音而得名。三音石恰于圆形回音壁的圆心位置，从这里发出的声波经由东、西配殿和回音壁墙面的反射，均能回到圆心；又因两个反射体到圆心的距离差别较大，所以能听到三声回音。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info4" class="info" style="display: none;">
+                <aside>
+                    <p class="tit">留影墙</p>
+                    <p class="tip">（点击查看大图）</p>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/圆明园-1.jpg);" onclick="showimage(14)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/圆明园-2.jpg);" onclick="showimage(15)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/圆明园-3.jpg);" onclick="showimage(16)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/圆明园-4.jpg);" onclick="showimage(17)"></div>
+                    </div>
+                </aside>
+                <div id="bigimages14" class="big" style="display: none;" onclick="hideimage(14)">
+                    <img src="../images/scenery/圆明园-1.jpg" alt="圆明园">
+                </div>
+                <div id="bigimages15" class="big" style="display: none;" onclick="hideimage(15)">
+                    <img src="../images/scenery/圆明园-2.jpg" alt="圆明园">
+                </div>  
+                <div id="bigimages16" class="big" style="display: none;" onclick="hideimage(16)">
+                    <img src="../images/scenery/圆明园-3.jpg" alt="圆明园">
+                </div>  
+                <div id="bigimages17" class="big" style="display: none;" onclick="hideimage(17)">
+                    <img src="../images/scenery/圆明园-4.jpg" alt="圆明园">
+                </div>
+                <main style="background-image: url(../images/scenery/圆.png);">
+                    <div class="tit">圆明园</div>
+                    <div class="description">
+                        <p>
+                            圆明园，中国清代大型皇家园林，位于北京市海淀区清华西路28号，占地350多公顷，其中水面面积约140公顷，由圆明园、绮春园、长春园组成，而以圆明园最大，故统称圆明园（亦称圆明三园）。圆明园不仅汇集了江南若干名园胜景，还移植了西方园林建筑，集当时古今中外造园艺术之大成。堪称人类文化的宝库之一，是当时世界上最大的一座博物馆。
+                        </p>
+                        <p>
+                            康熙末年和雍正年间，圆明园开始兴建。清雍正二年（1724年），圆明园的扩建工程正式开始。乾隆帝继位后，在圆明园内调整了园林的景观，增添了建筑组群。1860年，英法侵略者纵火焚烧圆明园，圆明园及附近的清漪园、静明园、静宜园、畅春园及海淀镇均被烧。清光绪二十六年（1900年），八国联军侵占北京，圆明园的建筑和古树名木遭到彻底毁灭。清朝灭亡后，圆明园的遗物又长期遭到官僚、军阀、奸商巧取豪夺。建国后，中国政府对圆明园开始了保护整修工作。
+                        </p>
+                        <p>
+                            圆明园大量仿建了中国各地特别是江南的许多名园胜景，其主要建筑类型包括殿、堂、亭、台、楼、阁、榭、廊、轩、斋、房、舫、馆、厅、桥、闸、墙、塔，以及寺庙、道观、村居、街市等；建筑平面布局共有38种。圆明园的园林造景多以水为主题，部分建筑包含大量宗教元素。
+                        </p>
+                        <p>
+                            1979年，圆明园遗址被列为北京市重点文物保护单位。1988年1月13日，圆明园遗址被国务院公布为第三批全国重点文物保护单位之一。2019年12月31日，北京市海淀区圆明园景区被文化和旅游部评定为国家AAAAA级旅游景区。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>彻底毁灭</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            同治年间，同治帝准备修复圆明园，供慈禧太后居住，曾试图择要重修。当时拟修范围为20余处共3000多间殿宇，主要集中在圆明园前朝区、后湖区和西部、北部一带，以及万春园宫门区、敷春堂口清夏堂等处。但开工不到10个月因财力枯竭被迫停修。此后，慈禧太后虽然修了颐和园，但并未修复圆明园。
+                        </p>
+                        <p>
+                            清光绪二十六年（1900年），八国联军侵占北京，西郊诸园再遭劫掠。清政府对圆明园已完全失去控制，土匪地痞即趁火打劫，土匪地痞们已不再满足于抢劫财富，他们把园内火劫之余的建筑、木桥的柱子、桩子锯断，用大绳拉倒，园内大小树木也被滥伐殆尽。当时清河镇上木材堆积如山，而园内则炭厂林立，树枝、树根全被烧成木炭。圆明园的建筑和古树名木遭到彻底毁灭。
+                        </p>
+                        <p>
+                            清宣统末年，旗人已在园内的宫殿旧址上筑屋，昔日的皇家园林麦垅相望。
+                        </p>
+                        <p>
+                            清朝灭亡后，圆明园的遗物又长期遭到官僚、军阀、奸商巧取豪夺。
+                        </p>
+                        <p>
+                            民国初期，军阀把圆明园作为取之不尽的建筑材料场。
+                        </p>
+                        <p>
+                            民国二十九年（1940年）以后的日本占领时期，北京粮食紧张，于是奖励开荒。从这时起，农户陆续入园平山填湖，开田种稻。圆明园这处在清初盛世历经150余年苦心经营的湖山之胜，面目全非。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>建筑风格</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            圆明园有个较为显著特点，即大量仿建了中国各地特别是江南的许多名园胜景。
+                        </p>
+                        <p>
+                            乾隆皇帝弘历曾六次南巡江浙，多次西巡五台，东巡岱岳，巡游热河、盛京（即沈阳）和盘山等地。每至一地，凡他所中意的名山胜水、名园胜景，就让随行画师摹绘成图，回京后在园内仿建。据不完全统计，圆明园的园林风景，有直接摹本的不下四五十处。杭州西湖十景，连名称也一字不改地在园内全部仿建。
+                        </p>
+                        <p>
+                            清乾隆二十七年（1762年），乾隆皇帝南巡时曾以海宁的陈氏隅园作为行馆，并赐名“安澜园”。乾隆皇帝很喜欢该园结构佳妙，回京后就在圆明园四宜书屋左右，仿其位置进行改建和增建。园成之后，也题名叫“安澜园”，当时仿建的另外三处名园，都在长春园内。一处是清乾隆二十三年（1758年），在思永斋东院，仿照杭州西湖汪氏园而建的小有天园；一处是清乾隆三十二年（1767年），仿照江宁（即南京）瞻园而建的如园；一处是乾隆三十七年（1772年），仿照苏州著名园林而建的狮子林。如园和狮子林，都分别有16个以上风景点。
+                        </p>
+                    </div>
+                </main>
+            </div>
+
+            <div id="info5" class="info" style="display: none;">
+                <aside>
+                    <p class="tit">留影墙</p>
+                    <p class="tip">（点击查看大图）</p>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/颐和园-1.jpg);" onclick="showimage(18)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/颐和园-2.jpg);" onclick="showimage(19)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/颐和园-3.jpg);" onclick="showimage(20)"></div>
+                    </div>
+                    <div class="card">
+                        <div class="image" style="background-image: url(../images/scenery/颐和园-4.jpg);" onclick="showimage(21)"></div>
+                    </div>
+                </aside>
+                <div id="bigimages18" class="big" style="display: none;" onclick="hideimage(18)">
+                    <img src="../images/scenery/颐和园-1.jpg" alt="颐和园">
+                </div>
+                <div id="bigimages19" class="big" style="display: none;" onclick="hideimage(19)">
+                    <img src="../images/scenery/颐和园-2.jpg" alt="颐和园">
+                </div>  
+                <div id="bigimages20" class="big" style="display: none;" onclick="hideimage(20)">
+                    <img src="../images/scenery/颐和园-3.jpg" alt="颐和园">
+                </div>  
+                <div id="bigimages21" class="big" style="display: none;" onclick="hideimage(21)">
+                    <img src="../images/scenery/颐和园-4.jpg" alt="颐和园">
+                </div>
+                <main style="background-image: url(../images/scenery/颐.png);">
+                    <div class="tit">颐和园</div>
+                    <div class="description">
+                        <p>
+                            颐和园，中国清朝时期皇家园林，前身为清漪园，坐落在北京西郊，距城区15公里，全园占地3.009平方公里（其中颐和园世界文化遗产区面积为2.97平方公里），水面约占四分之三。与圆明园毗邻。它是以昆明湖、万寿山为基址，以杭州西湖为蓝本，汲取江南园林的设计手法而建成的一座大型山水园林，也是保存最完整的一座皇家行宫御苑，被誉为“皇家园林博物馆”。
+                        </p>
+                        <p>
+                            清朝乾隆皇帝继位以前，在北京西郊一带，建起了四座大型皇家园林。乾隆十五年（1750年），乾隆皇帝为孝敬其母崇庆皇太后动用448万两白银在这里改建为清漪园，形成了从现清华园到香山长达二十公里的皇家园林区。咸丰十年（1860年），清漪园被英法联军焚毁。光绪十四年（1888年）重建，改称颐和园，作消夏游乐地。光绪二十六年（1900年），颐和园又遭“八国联军”的破坏，珍宝被劫掠一空。清朝灭亡后，颐和园在军阀混战和国民党统治时期，又遭破坏。
+                        </p>
+                        <p>
+                            1961年3月4日，颐和园被公布为第一批全国重点文物保护单位，与同时公布的承德避暑山庄、拙政园、留园并称为中国四大名园，1998年11月被列入《世界遗产名录》。2007年5月8日，颐和园经国家旅游局正式批准为国家5A级旅游景区。 2009年，颐和园入选中国世界纪录协会中国现存最大的皇家园林。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>建筑格局</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            颐和园全园占地3.009平方公里(其中颐和园世界文化遗产区面积是2.97平方公里)，水面约占四分之三。主要由万寿山和昆明湖两部分组成。各种形式的宫殿园林建筑3000余间，大致可分为行政、生活、游览三个部分。
+                        </p>
+                        <p>
+                            以仁寿殿为中心的行政区，是当年慈禧太后和光绪皇帝坐朝听政，会见外宾的地方。仁寿殿后是三座大型四合院：乐寿堂、玉澜堂和宜芸馆，分别为慈禧、光绪和后妃们居住的地方。宜芸馆东侧的德和园大戏楼是清代三大戏楼之一。
+                        </p>
+                        <p>
+                            颐和园自万寿山顶的智慧海向下，由佛香阁、德辉殿、排云殿、排云门、云辉玉宇坊，构成了一条层次分明的中轴线。山下是一条长700多米的“长廊”，长廊枋梁上有彩画8000多幅，号称 “世界第一廊”。长廊之前是昆明湖。昆明湖的西堤是仿照西湖的苏堤建造的。
+                        </p>
+                        <p>
+                            万寿山后山、后湖古木成林，有藏式寺庙，苏州河古买卖街。后湖东端有仿无锡寄畅园而建的谐趣园，小巧玲珑，被称为“园中之园”。
+                        </p>
+                    </div>
+                    <div class="sub">
+                        <p>文物收藏</p>
+                    </div>
+                    <div class="description">
+                        <p>
+                            清漪园时期，乾隆皇帝对文玩多有搜罗，商周铜器、唐宋元明瓷玉及书画很多，当时著录的陈设达四万余件，清廷内务府专门设立《陈设清册》，建档管理。
+                        </p>
+                        <p>
+                            新中国成立后，颐和园园藏文物计有四万余件，品类涉及铜器、玉器、瓷器、木器、漆器、书画、古籍、珐琅、钟表、竹器、乐器、根雕、杂项等，几乎涵盖了中国传世文物的所有门类，并有不少外国文物；从价值上看，国家级文物有二万余件，其中包括虢宣公子白鼎、三牺尊、缂丝长轴佛像图等国宝级珍品。
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <footer>
+            <img src="../images/logo/剪影.png" alt="城市剪影">
+            <p>&copy;&nbsp;2023-2023&nbsp;京彩&nbsp;&copy;&nbsp;童湧文<br>2023年春季学期Web前端开发期末大作业</p>
+        </footer>
     </div>
 
     <script src="../js/nav.js"></script>
     <script src="../js/menu.js"></script>
+    <script src="../js/scenery.js"></script>
 </body>
 </html>

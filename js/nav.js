@@ -6,3 +6,7 @@ btn.addEventListener('click', () =>{
     search.classList.toggle('active')
     input.focus()
 })
+
+function gotop(){
+    window.location.href="#";
+}

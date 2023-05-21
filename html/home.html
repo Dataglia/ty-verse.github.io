@@ -25,7 +25,7 @@
                             <li><a href="cuisine.html">北京烤鸭</a></li>
                             <li><a href="cuisine.html">炸酱面</a></li>
                             <li><a href="cuisine.html">铜锅涮肉</a></li>
-                            <li><a href="cuisine.html">豆汁焦圈</a></li>
+                            <li><a href="cuisine.html">豆汁</a></li>
                             <li><a href="cuisine.html">卤煮</a></li>
                         </ol>
                     </li>
@@ -33,7 +33,7 @@
                         <a href="scenery.html">名胜古迹</a>
                         <ol>
                             <li><a href="scenery.html">故宫</a></li>
-                            <li><a href="scenery.html">长城</a></li>
+                            <li><a href="scenery.html">八达岭长城</a></li>
                             <li><a href="scenery.html">天坛</a></li>
                             <li><a href="scenery.html">圆明园</a></li>
                             <li><a href="scenery.html">颐和园</a></li>
@@ -49,7 +49,7 @@
                         </ol>
                     </li>
                     <li>
-                        <a href="index.html">退出登录</a>
+                        <a href="/index.html">退出登录</a>
                     </li>
                     <li class="underline"></li>
                 </ul>
@@ -60,12 +60,28 @@
                     <button class="searchbtn"></button>
                 </div>
             </div>
+            <div class="tools">
+                <div class="circle" onclick="gotop()">
+                    <p>回到<br>顶部</p>
+                </div>
+                <div class="circle">
+                    <p>联系<br>我们</p>
+                </div>
+                <div class="circle">
+                    <p>关于<br>京彩</p>
+                </div>
+                <div class="circle">
+                    <p>帮助<br>中心</p>
+                </div>
+            </div>
         </nav>
 
         <div class="photos">
             <p>上京彩&nbsp;见证北京风采</p>
             <ul id="album" class="album"></ul>
         </div>
+
+        <img class="line" src="../images/logo/分界线-2.png" alt="分界线">
 
         <div class="content">
             <div class="main">
@@ -80,10 +96,71 @@
                     <p class="info">
                         北京市地势西北高、东南低。西部、北部和东北部三面环山，东南部是一片缓缓向渤海倾斜的平原。境内流经的主要河流有：永定河、潮白河、北运河、拒马河等，北京市的气候为暖温带半湿润半干旱季风气候，夏季高温多雨，冬季寒冷干燥，春、秋短促。北京被世界城市研究机构GaWC评为世界一线城市，联合国报告指出北京市人类发展指数居中国城市第二位。北京市成功举办夏奥会与冬奥会，成为全世界第一个“双奥之城”。
                     </p>
+                    <p class="info">
+                        截至2020年，北京市共辖16个市辖区，分别是东城区、西城区、朝阳区、丰台区、石景山区、海淀区、顺义区、通州区、大兴区、房山区、门头沟区、昌平区、平谷区、密云区、怀柔区、延庆区。北京市人民政府驻通州区运河东大街57号。
+                    </p>
+                    <p class="info">
+                        2022年，年末全市常住人口2184.3万人，比上年末减少4.3万人。其中，城镇人口1912.8万人，占常住人口的比重为87.6%；常住外来人口825.1万人，占常住人口的比重为37.8%。常住人口出生率为5.67‰，死亡率为5.72‰，自然增长率为-0.05‰。全年城镇新增就业26万人。全年城镇调查失业率均值为4.7%，运行在年度调控目标内。
+                    </p>
+                    <p class="info">
+                        2022年，初步核算，全年实现地区生产总值41610.9亿元，按不变价格计算，比上年增长0.7%。其中，第一产业增加值111.5亿元，下降1.6%；第二产业增加值6605.1亿元，下降11.4%；第三产业增加值34894.3亿元，增长3.4%。三次产业构成为0.3︰15.9︰83.8。按常住人口计算，全市人均地区生产总值为19.0万元。
+                    </p>
                 </div>
-                <div class="feeling">
-                    <p class="tit">我的家乡</p>
-                    <p class="info">抛开北京的众多头衔和耀眼成绩不谈，北京更是我的家乡。我从出生之时起便生活在这里，整整19年。北京的市井生活和人文气息时时刻刻陪伴着我，深深地影响着我，塑造了我的性格。</p>
+                <div class="capital">
+                    <p class="tit">建都朝代</p>
+                    <p class="info">
+                        北京是一座有着三千多年历史的古都，在不同的朝代有着不同的称谓，大致算起来有二十多个别称。
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>朝代（时期）</th>
+                                <th>中心位置</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>燕国</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td>春秋战国·蓟国</td>
+                                <td>北京广安门外</td>
+                            </tr>
+                            <tr>
+                                <td>春秋战国·燕国</td>
+                                <td>房山区琉璃河镇，一说北京广安门外</td>
+                            </tr>
+                            <tr>
+                                <td>辽</td>
+                                <td>北京广安门外</td>
+                            </tr>
+                            <tr>
+                                <td>金</td>
+                                <td>北京广安门外</td>
+                            </tr>
+                            <tr>
+                                <td>元</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td>明</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td>清</td>
+                                <td>北京</td>
+                            </tr>
+                            <tr>
+                                <td>中华民国</td>
+                                <td>北京市</td>
+                            </tr>
+                            <tr>
+                                <td>中华人民共和国</td>
+                                <td>北京市</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <aside>
@@ -121,10 +198,55 @@
         </div>  
         <div id="bigimages4" class="big" style="display: none;" onclick="hide(4)">
             <img src="../images/home/北京市地形图.jpg" alt="北京市地形图">
-        </div>  
+        </div>
+
+        <img class="line" src="../images/logo/分界线-3.png" alt="分界线">
+
+        <div class="culture">
+            <p class="tit">传统文化</p>
+            <p class="tip">（点击按钮可翻页）</p>
+            <div class="slider-container">
+                <div class="left-slide">
+                    <div style="background-color:#252E33 ;">
+                        <h1>糖人</h1>
+                        <p>糖人是以熬化的蔗糖或麦芽糖做成的各种造型，有人物、动物、花草等。制作糖人是一种北京传统手工技艺，制作者都挑一个担子，一头是加热用的炉具，另一头是糖料和工具。</p>
+                    </div>
+                    <div style="background-color:#e9d923 ;">
+                        <h1>老北京风筝</h1>
+                        <p>北京人喜欢玩风筝，市井间曾流传着这样的童谣：“阳春三月柳条青，结伴郊外放风筝，女孩喜爱花蝴蝶，男孩爱放大老鹰。”</p>
+                        <p>老北京风筝有着悠久的历史，关于风筝的往事也数不胜数。一到春天，老北京街头随处可见风筝摊。这些五颜六色的风筝为北京带来无限的生机和活力。</p>
+                    </div>
+                    <div style="background-color:rgb(255, 144, 33);">
+                        <h1>兔爷儿</h1>
+                        <p>兔爷是北京市的汉族传统手工艺品，属于中秋应节应令的儿童玩具。</p>
+                        <p>人们按照月宫里有嫦娥玉兔的说法，把玉兔进一步艺术化、人格化，乃至神化之后，用泥巴塑造成各种不同形式的兔儿爷。</p>
+                    </div>
+                    <div style="background-color:#f33838;">
+                        <h1>京剧</h1>
+                        <p>京剧是融唱念做打于一体的戏剧表演形式，19世纪中期，孕育于民间，融合了中国南北方戏剧元素的京剧，在北京发展成熟，广泛流布于全国。</p>
+                        <p>2010年11月16日，京剧被联合国列入联合国教科文组织非物质文化遗产名录。</p>
+                    </div>
+                </div>
+                <div class="right-slide">
+                    <div style="background-image: url(../images/home/京剧.jpg);"></div>
+                    <div style="background-image: url(../images/home/兔爷儿.jpg)"></div>
+                    <div style="background-image: url(../images/home/纸鸢.jpg)"></div>
+                    <div style="background-image: url(../images/home/糖人.jpg)"></div>
+                   </div>
+                <div class="action-buttons">
+                    <button class="down-button">
+                        <img src="../images/logo/向下箭头.png" alt="箭头">
+                    </button>
+                    <button class="up-button">
+                        <img src="../images/logo/向上箭头.png" alt="箭头">
+                    </button>
+                </div>
+            </div>
+        </div>
             
         <footer>
             <img src="../images/logo/剪影.png" alt="城市剪影">
+            <p>&copy;&nbsp;2023-2023&nbsp;京彩&nbsp;&copy;&nbsp;童湧文<br>2023年春季学期Web前端开发期末大作业</p>
         </footer>
     </div>
 

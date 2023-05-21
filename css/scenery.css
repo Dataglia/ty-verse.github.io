@@ -2,7 +2,220 @@
     margin: 0;
     padding: 0;
 }
+
 .navbar ul .underline{
     left: 400px;
     background-color: #ffa126;
+}
+
+.line{
+    width: 100vw;
+}
+
+.info{
+    width: 100vw;
+}
+
+aside{
+    width: 28vw;
+    float: left;
+    margin: 10px 0px 10px 4vw;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+aside > .tit{
+    text-align: center;
+    font-size: 40px;
+    font-family: "华文楷体";
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px rgb(136, 136, 136);
+    margin: 40px auto;
+    margin-bottom: 10px;
+}
+
+aside > .tip{
+    text-align: center;
+    font-size: 18px;
+    color: rgb(129, 129, 129);
+}
+
+main{
+    width: 60vw;
+    float: left;
+    margin: 10px 0px 10px 2vw;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 10px 60px;
+    overflow: hidden;
+    background-image: url(../images/scenery/坛.png);
+    background-size: 40vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 55vw 45vh;
+}
+
+main > img{
+    width: 35vw;
+    position: fixed;
+    opacity: 50%;
+    top: 50vh;
+    left: 50vw;
+}
+
+main .tit{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: "华文隶书";
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+main .description:last-child{
+    margin-bottom: 50px;
+}
+
+main .description p{
+    text-indent: 2em;
+    margin: 20px auto;
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+
+main .sub p{
+    font-size: 35px;
+    font-weight: bolder;
+    margin: 30px 0px;
+    font-family: "华文楷体";
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    text-indent: 1em;
+}
+
+.card{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    margin: 40px auto;
+    /* 设置视觉距离 */
+    perspective: 1000px;
+}
+
+.card:last-child{
+    margin-bottom: 60px;
+}
+/* 投影效果 */
+.card::before{
+    content: "";
+    width: 93%;
+    height: 93%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 绝对定位 */
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    /* 投影 */
+    /* box-shadow: 0 60px 12px 12px rgba(0, 0, 0, 0.4); */
+    box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    /* 设置旋转元素的基点位置 */
+    transform-origin: top center;
+    /* 设置过渡时间:时长 加速后减速 */
+    transition: 0.3s ease-in-out;
+}
+
+/* 鼠标移上,投影的变化 */
+.card:hover:before{
+    opacity: 0.5;
+    transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+/* 封面 */
+.image{
+    /* 绝对定位 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 开启3D效果 */
+    transform-style: preserve-3d;
+    /* 设置旋转元素的基点位置 */
+    transform-origin: top center;
+    /* 设置过渡 */
+    transition: transform 0.3s ease-in-out;   
+    cursor: pointer; 
+}
+
+.image::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120%;
+    height: 170%;
+    /* 背景渐变(高光效果) */
+    background: linear-gradient(225deg,rgba(255,255,255,0) 40%,rgba(255,255,255,0.4) 50%,rgba(255,255,255,0) 60%);
+    /* background: linear-gradient(226deg,rgba(225,255,255,0) 40%,rgba(225,255,255,0.3) 50%,rgba(225,255,255,0) 60%,); */
+    /* 默认上移的可视化范围 */
+    transform: translateY(-100%);
+    /* 设置过渡 */
+    /* transform: transform 0.85s cubic-bezier(0.165, 0.84, 0.44, 1) ; */
+    transition: transform 0.85s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.card:hover .image{
+    transform: rotateX(7deg) translateY(-6px);
+}
+
+.card:hover .image::after{
+    transform: translateY(100%);
+}
+
+
+.big{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background-color: rgba(34, 34, 34, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.big > img{
+    height: 90vh;
+    position: fixed;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+footer{
+    width: 100vw;
+    height: 700px;
+    clear: both;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer img{
+    width: 100vw;
+    position: absolute;
+    margin-bottom: 0px;
+}
+
+footer p{
+    z-index: 100;
+    margin: 30px auto;
+    font-size: 18px;
+    text-align: center;
+    color: #3C4042;
 }

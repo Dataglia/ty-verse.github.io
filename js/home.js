@@ -125,3 +125,35 @@ function hide(pos){
     let picture = document.getElementById("bigimages"+pos);
     picture.style.display="none";
 }
+
+// 定义获取html的值
+let sliderContainer = document.querySelector('.slider-container')
+let slideRight = document.querySelector('.right-slide')
+let slideLeft = document.querySelector('.left-slide')
+let upButton = document.querySelector('.up-button')
+let downButton = document.querySelector('.down-button')
+let slidesLength = slideRight.querySelectorAll('div').length
+
+// 初始化设置0
+let activeSlideIndex = 0
+
+upButton.addEventListener('click',() => changeSlide('up'))
+downButton.addEventListener('click',() => changeSlide('down'))
+
+let changeSlide = (direction) =>{
+    let slidesHeight = sliderContainer.clientHeight
+    if(direction === 'up'){
+        activeSlideIndex++
+        if(activeSlideIndex > slidesLength - 1){
+            activeSlideIndex = 0
+        }
+    } else if(direction === 'down'){
+        activeSlideIndex--
+        if(activeSlideIndex < 0){
+            activeSlideIndex = slidesLength - 1
+        }
+    }
+
+    slideRight.style.transform = `translateY(-${activeSlideIndex * slidesHeight }px)`
+    slideLeft.style.transform = `translateY(${activeSlideIndex * slidesHeight }px)`
+}

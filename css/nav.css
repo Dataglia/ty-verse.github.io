@@ -7,9 +7,8 @@
 body{
     width: 100vw;
     overflow-x: hidden;
-    background-image: linear-gradient(125deg, #ff3a3a, #e5ff00);
-    background-size: 300%;
-    animation: backgroundmove 10s infinite;
+    background-image: linear-gradient(45deg, #ff2f00, #fff700);
+    background-size: 100%; 
 }
 
 li{
@@ -209,14 +208,46 @@ nav img:hover{
     background-color: #c3c3c3;
 }
 
-@keyframes backgroundmove{
-    0%{
-        background-position: 0% 0%;
-    }
-    50%{
-        background-position: 100% 100%;
-    }
-    100%{
-        background-position: 0% 0%;
-    }
+.circle{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    position: fixed;
+    /* background-color: #fff; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    right: 0.5vw;
+    top: 500px;
+    z-index: 200;
+    cursor: pointer;
+    background-image: url(../images/logo/边框.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.circle:hover{
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+.circle:nth-child(1){
+    top: 35vh;
+}
+
+.circle:nth-child(2){
+    top: 45vh;
+}
+
+.circle:nth-child(3){
+    top: 55vh;
+}
+
+.circle:nth-child(4){
+    top: 65vh;
+}
+
+.circle > p{
+    text-align: center;
+    margin-top: 1vw;
+    line-height: 1vw;
+    font-size: 1vw;
+    font-weight: 600;
 }
